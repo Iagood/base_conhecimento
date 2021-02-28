@@ -30,4 +30,9 @@ class LoginController extends Controller
       
       return redirect()->route('site.home');
     }
+
+    public function cronograma()
+    {
+      return view('login.cronograma');
+    }
 }

@@ -11,6 +11,13 @@ class BaseController extends Controller
     public function index()
     {
    
-      return view('admin.home.index');
+      return view('index');
     }
+
+    public function cronograma()
+    {
+        return view('cronograma.cronograma_desen');
+    }
+    //   faltando as condições para as outras views
+    // }
 }
