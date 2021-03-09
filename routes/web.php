@@ -23,9 +23,19 @@ Route::post('/login/entrar', ['as' => 'site.login.entrar', 'uses' => 'Site\Login
 Route::get('/admin/cursos', ['as' => 'admin.cursos', 'uses' => 'BaseController@index']);
 
 
+
+
 Route::group(['middleware' => 'auth'], function () {
 
   Route::get('/midias', ['as'=> 'midias.index', 'uses'=> 'MidiasController@index']);
   Route::get('/midias/cad', ['as'=> 'midias.cad', 'uses'=> 'MidiasController@cadastrar']);
+
+
+
+//  Cronograma
+Route::get('/admin/cursos/cronograma_desenvolvimento', ['as' => 'admin.cronograma.desen', 'uses' => 'BaseController@cronograma']);
+Route::get('/admin/cursos/cronograma_nivelum', ['as' => 'admin.cronograma.nivelum', 'uses' => 'BaseController@cronograma']);
+Route::get('/admin/cursos/cronograma_niveldois', ['as' => 'admin.cronograma.niveldois', 'uses' => 'BaseController@cronograma']);
+Route::get('/admin/cursos/cronograma_astec', ['as' => 'admin.cronograma.astec', 'uses' => 'BaseController@cronograma']);
 
 });
