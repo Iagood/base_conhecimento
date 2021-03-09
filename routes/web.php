@@ -20,11 +20,12 @@ Route::get('/login/sair', ['as' => 'site.login.sair', 'uses' => 'Site\LoginContr
 
 Route::post('/login/entrar', ['as' => 'site.login.entrar', 'uses' => 'Site\LoginController@entrar']);
 
+Route::get('/admin/cursos', ['as' => 'admin.cursos', 'uses' => 'BaseController@index']);
 
 
 Route::group(['middleware' => 'auth'], function () {
 
-  Route::get('/admin/cursos', ['as' => 'admin.cursos', 'uses' => 'BaseController@index']);
+  Route::get('/midias', ['as'=> 'midias.index', 'uses'=> 'MidiasController@index']);
+  Route::get('/midias/cad', ['as'=> 'midias.cad', 'uses'=> 'MidiasController@cadastrar']);
 
- 
 });

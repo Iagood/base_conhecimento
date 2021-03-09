@@ -4,7 +4,8 @@
 
 @section('conteudo')
   <div class="container">
-    <h3 class="center">Apresentação da Base de Conhecimento</h3>
+  <p style="text-align: center;" class="flow-text">Apresentação da Base de Conhecimento</p>
+  
     <div class="row">
  
     </div>
